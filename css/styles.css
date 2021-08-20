@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,100;1,300&display=swap");
 @font-face {
   font-family: Angro;
-  src: url(/img//AngroEF-Bold\ Regular.otf);
+  src: url(https://saadiyam.github.io/img//AngroEF-Bold-Regular.otf);
   font-weight: regular;
 }
 
@@ -4921,7 +4921,7 @@ progress {
   width: 0;
   height: 0;
   margin: 30px 0 20px 20px;
-  background: url("/img/menu-blob.svg");
+  background: url("https://saadiyam.github.io/img/menu-blob.svg");
   background-repeat: no-repeat;
 }
 
@@ -4940,7 +4940,7 @@ progress {
 
 @media screen and (max-width: 500px) {
   .menu-bg {
-    background: url("/img/menu-blob-mobile.svg");
+    background: url("https://saadiyam.github.io/img/menu-blob-mobile.svg");
     background-repeat: no-repeat;
   }
 
@@ -4954,7 +4954,7 @@ progress {
 
 @media screen and (min-width: 501px) and (max-width: 800px) {
   .menu-bg {
-    background: url("/img/menu-blob-tab.svg");
+    background: url("https://saadiyam.github.io/img/menu-blob-tab.svg");
     background-repeat: no-repeat;
   }
 
@@ -5332,7 +5332,7 @@ progress {
   z-index: 1;
   width: 855px;
   height: 990px;
-  background: url("/img/blob.svg");
+  background: url("https://saadiyam.github.io/img/blob.svg");
   transition: 0.3s ease;
   background-repeat: no-repeat;
   display: none;
@@ -5342,7 +5342,7 @@ progress {
   z-index: 1;
   width: 855px;
   height: 990px;
-  background: url("/img/blob2.svg");
+  background: url("https://saadiyam.github.io/img/blob2.svg");
   transition: 0.3s ease;
   background-repeat: no-repeat;
   display: none;
@@ -5360,7 +5360,7 @@ progress {
   width: 855px;
   height: 990px;
   margin: 30px 0 20px 20px;
-  background: url("/img/blob3.svg");
+  background: url("https://saadiyam.github.io/img/blob3.svg");
   transition: 0.3s ease;
   background-repeat: no-repeat;
   display: none;
@@ -5399,12 +5399,12 @@ progress {
   }
 
   .project-bg-3 {
-    background: url("/img/blob3-mobile.svg");
+    background: url("https://saadiyam.github.io/img/blob3-mobile.svg");
     background-repeat: no-repeat;
   }
 
   .project-bg-2 {
-    background: url("/img/blob2-mobile.svg");
+    background: url("https://saadiyam.github.io/img/blob2-mobile.svg");
     background-repeat: no-repeat;
   }
 
@@ -5468,7 +5468,7 @@ progress {
   }
 
   .project-bg {
-    background: url("/img/blob-mobile.svg");
+    background: url("https://saadiyam.github.io/img/blob-mobile.svg");
     background-repeat: no-repeat;
   }
 
@@ -5525,7 +5525,7 @@ progress {
     font-size: 35px !important;
   }
   .project-bg-3 {
-    background: url("/img/blob3-tab.svg");
+    background: url("https://saadiyam.github.io/img/blob3-tab.svg");
     background-repeat: no-repeat;
   }
 
@@ -5534,7 +5534,7 @@ progress {
   }
 
   .project-bg-2 {
-    background: url("/img/blob2-tab.svg");
+    background: url("https://saadiyam.github.io/img/blob2-tab.svg");
     background-repeat: no-repeat;
   }
 
@@ -5614,7 +5614,7 @@ progress {
     padding-right: 310px;
   }
   .project-bg {
-    background: url("/img/blob-tab.svg");
+    background: url("https://saadiyam.github.io/img/blob-tab.svg");
     background-repeat: no-repeat;
   }
 
