@@ -1,3 +1,10 @@
+var activeNavItem = $('.nav-link');
+
+activeNavItem.click(function(){
+  activeNavItem.removeClass('active');
+  $(this).addClass('active');  
+});
+
 function onClickMenu(){
 	document.getElementById("menu").classList.toggle("change");
 	document.getElementById("nav").classList.toggle("change");
@@ -17,6 +24,10 @@ function onClickBtn1(){
 	document.getElementById("btn2").classList.toggle("blur");
 	document.getElementById("btn3").classList.toggle("blur");
 	document.getElementById("logo").classList.toggle("blur");
+	document.getElementById("menu").classList.toggle("blur");
+	document.getElementById("project-bg-2").classList.add("hide");
+	document.getElementById("project-bg-3").classList.add("hide");
+
 }
 
 function onCloseBtn1(){
@@ -30,6 +41,7 @@ function onCloseBtn1(){
 	document.getElementById("btn2").classList.toggle("blur");
 	document.getElementById("btn3").classList.toggle("blur");
 	document.getElementById("logo").classList.toggle("blur");
+	document.getElementById("menu").classList.toggle("blur");
 	
 }
 
@@ -44,6 +56,9 @@ function onClickBtn2(){
 	document.getElementById("btn2").classList.toggle("blur");
 	document.getElementById("btn3").classList.toggle("blur");
 	document.getElementById("logo").classList.toggle("blur");
+	document.getElementById("menu").classList.toggle("blur");
+	document.getElementById("project-bg").classList.add("hide");
+	document.getElementById("project-bg-3").classList.add("hide");
 }
 
 function onCloseBtn2(){
@@ -57,6 +72,7 @@ function onCloseBtn2(){
 	document.getElementById("btn2").classList.toggle("blur");
 	document.getElementById("btn3").classList.toggle("blur");
 	document.getElementById("logo").classList.toggle("blur");
+	document.getElementById("menu").classList.toggle("blur");
 }
 
 function onClickBtn3(){
@@ -71,6 +87,9 @@ function onClickBtn3(){
 	document.getElementById("btn2").classList.toggle("blur");
 	document.getElementById("btn3").classList.toggle("blur");
 	document.getElementById("logo").classList.toggle("blur");
+	document.getElementById("menu").classList.toggle("blur");
+	document.getElementById("project-bg").classList.add("hide");
+	document.getElementById("project-bg-2").classList.add("hide");
 }
 
 function onCloseBtn3(){
@@ -85,4 +104,5 @@ function onCloseBtn3(){
 	document.getElementById("btn2").classList.toggle("blur");
 	document.getElementById("btn3").classList.toggle("blur");
 	document.getElementById("logo").classList.toggle("blur");
+	document.getElementById("menu").classList.toggle("blur");
 }

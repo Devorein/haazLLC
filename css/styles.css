@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,100;1,300&display=swap");
 @font-face {
   font-family: Angro;
-  src: url(https://saadiyam.github.io/img//AngroEF-Bold-Regular.otf);
+  src: url(https://saadiyam.github.io/haazLLC/img/AngroEF-Bold-Regular.otf);
   font-weight: regular;
 }
 
@@ -50,7 +50,7 @@ body {
   background-color: #fff;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  overflow-x: hidden!important;
+  overflow-x: hidden !important;
 }
 
 h6,
@@ -101,7 +101,7 @@ h1,
   }
 
   .header.page-section {
-    height: 48.5vh !important;
+    height: 55vh !important;
     padding: 5rem 0.5rem !important;
     line-height: 6rem !important ;
   }
@@ -2893,9 +2893,8 @@ h6,
 html {
   height: 100%;
   scroll-padding-top: calc(4.5rem - 1px);
-  overflow-x: hidden!important;
+  overflow-x: hidden !important;
 }
-
 
 .page-section {
   padding: 6rem 0;
@@ -3228,6 +3227,8 @@ output {
 
 iframe {
   border: 0;
+  margin-top: 90px !important;
+  min-height: 565px;
 }
 
 summary {
@@ -4852,9 +4853,12 @@ progress {
   font-size: 75px;
   text-decoration: none;
 }
-.nav li a:hover {
-  font-weight: bold;
+
+.nav-link.active a {
+  -webkit-text-stroke: 1px white;
+  -webkit-text-fill-color: black;
 }
+
 .nav li {
   list-style: none;
   padding: 16px 0;
@@ -4868,7 +4872,7 @@ progress {
   display: none;
 }
 
-@media screen and (max-width:800px) {
+@media screen and (max-width: 800px) {
   #nav {
     padding: 0;
     height: 100vh;
@@ -4876,22 +4880,22 @@ progress {
     margin: -38px -302px;
     border-radius: 40%;
     display: none;
-}
+  }
 }
 
 @media screen and (max-width: 425px) {
-#nav {
-  padding: 0;
-  height: 100vh;
-  width: 100%;
-  margin: -69px -230px;
-  border-radius: 40%;
-  display: none;
-}
+  #nav {
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    margin: -69px -230px;
+    border-radius: 40%;
+    display: none;
+  }
 }
 #menu-bar {
   top: 0;
-  left: 96%;
+  right: 20px;
   position: absolute;
 }
 
@@ -4900,31 +4904,21 @@ progress {
     margin-left: 20px !important;
     margin-right: 20px !important;
   }
-
-  #menu-bar {
-    left: 94%;
-  }
-
-  .menu-bg {
-    left: 90% !important;
-  }
 }
 
-.menu-bg {
+/* .menu-bg {
   top: 193px;
   left: 88%;
 
   position: absolute;
-}
+} */
 .menu-bg {
   z-index: 1;
   width: 0;
   height: 0;
-  margin: 30px 0 20px 20px;
-  background: url("https://saadiyam.github.io/img/menu-blob.svg");
+  background: url("https://saadiyam.github.io/haazLLC/img/menu-blob.svg");
   background-repeat: no-repeat;
 }
-
 
 .change #bar1 {
   transform: translateY(4px) rotateZ(-45deg);
@@ -4940,28 +4934,25 @@ progress {
 
 @media screen and (max-width: 500px) {
   .menu-bg {
-    background: url("https://saadiyam.github.io/img/menu-blob-mobile.svg");
+    background: url("https://saadiyam.github.io/haazLLC/img/menu-blob-mobile.svg");
     background-repeat: no-repeat;
   }
 
   .menu-bg.change-bg {
-    
+    width: 361px;
     height: 1000px;
-    transform: translate(-45%, -26%);
   }
 }
 
-
 @media screen and (min-width: 501px) and (max-width: 800px) {
   .menu-bg {
-    background: url("https://saadiyam.github.io/img/menu-blob-tab.svg");
+    background: url("https://saadiyam.github.io/haazLLC/img/menu-blob-tab.svg");
     background-repeat: no-repeat;
   }
 
   .menu-bg.change-bg {
-    
+    width: 461px;
     height: 1000px;
-    transform: translate(-43%, -26%);
   }
 
   .nav {
@@ -4983,16 +4974,27 @@ progress {
   z-index: 2;
 }
 .change-bg {
-  width: 900px;
+  width: 761px;
   height: 1000px;
-  transform: translate(-60%, -30%);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.hide {
+  display: none;
 }
 
 @media screen and (max-width: 500px) {
   .change-bg {
     width: 750px;
     height: 1000px;
-    transform: translate(-90%, -30%);
+  }
+
+  #menu-bar {
+    top: 0;
+    right: 10px;
+    position: absolute;
   }
 
   .nav li a {
@@ -5054,7 +5056,7 @@ progress {
     cursor: pointer;
   }
   .change .bar {
-    background-color: #A5A5A5 ;
+    background-color: #a5a5a5;
   }
   .change #bar1 {
     transform: translateY(4px) rotateZ(-45deg);
@@ -5070,151 +5072,149 @@ progress {
   }
 }
 
-  
-  
-  #contact-form {
-    margin-left: 150px;
-    margin-right: 150px;
+#contact-form {
+  margin-left: 345px;
+  margin-right: 345px;
+}
+
+div.circles {
+  text-align: center;
+  margin: 2rem 0 2rem 0;
+}
+span.circle {
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  margin-right: 3.5rem;
+  transition: 0.5s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+
+span.circle.small {
+  display: inline-block;
+  height: 70px;
+  width: 70px;
+  border-radius: 100%;
+  margin-right: 1.5rem;
+  transition: 0.5s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+
+@media screen and (max-width: 500px) {
+  .project-row {
+    padding: 65px 20px 20px 0px !important;
   }
 
   div.circles {
     text-align: center;
-    margin: 2rem 0 2rem 0;
+    margin: 1rem 0 1rem 0;
   }
-  span.circle {
-    display: inline-block;
-    height: 100px;
-    width: 100px;
-    border-radius: 100%;
-    margin-right: 3.5rem;
-    transition: 0.5s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+
+  .circle-container {
+    margin-left: 20px;
+  }
+
+  span.circle.small.before {
+    display: none;
   }
 
   span.circle.small {
-    display: inline-block;
+    height: 50px;
+    width: 50px;
+    margin-right: 1rem;
+    border-radius: 100%;
+  }
+
+  span.circle {
     height: 70px;
     width: 70px;
     border-radius: 100%;
-    margin-right: 1.5rem;
-    transition: 0.5s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+    margin-right: 2rem;
   }
 
-  @media screen and (max-width: 500px) {
-    div.circles {
-      text-align: center;
-      margin: 1rem 0 1rem 0;
-    }
-
-    .circle-container {
-      margin-left: 20px;
-    }
-
-    span.circle.small.before {
-      display: none;
-    }
-
-    span.circle.small {
-      height: 50px;
-      width: 50px;
-      margin-right: 1rem;
-      border-radius: 100%;
-    }
-
-    span.circle {
-      height: 70px;
-      width: 70px;
-      border-radius: 100%;
-      margin-right: 2rem;
-    }
-
-    #num9,
-    #num10,
-    #num11,
-    #num12,
-    #num13,
-    #num14,
-    #num15 {
-      display: none;
-    }
-
-    .contact.circles #num8 {
-      display: none;
-    }
-    span.circle#num4,
-    span.circle#num5 {
-      display: none !important;
-    }
-
-    div.circles.four,
-    div.circles.five {
-      display: none;
-    }
+  #num9,
+  #num10,
+  #num11,
+  #num12,
+  #num13,
+  #num14,
+  #num15 {
+    display: none;
   }
+
+  span.circle#num4,
+  span.circle#num5 {
+    display: none !important;
+  }
+
+  div.circles.four,
+  div.circles.five {
+    display: none;
+  }
+}
 
 @media screen and (min-width: 501px) and (max-width: 800px) {
-    div.circles {
-      text-align: center;
-      margin: 1rem 0 1rem 0;
-    }
+  div.circles {
+    text-align: center;
+    margin: 1rem 0 1rem 0;
+  }
 
-    span.circle.small.before {
-      display: none;
-    }
+  span.circle.small.before {
+    display: none;
+  }
 
-    span.circle.small {
-      height: 50px;
-      width: 50px;
-      margin-right: 1rem;
-      border-radius: 100%;
-    }
+  span.circle.small {
+    height: 50px;
+    width: 50px;
+    margin-right: 1rem;
+    border-radius: 100%;
+  }
 
-    span.circle#num4,
-    span.circle#num5 {
-      display: none !important;
-    }
+  span.circle#num4,
+  span.circle#num5 {
+    display: none !important;
+  }
 
-    div.circles.four,
-    div.circles.five {
-      display: none;
-    }
+  div.circles.four,
+  div.circles.five {
+    display: none;
+  }
 
-    span.circle {
-      height: 70px;
-      width: 70px;
-      margin-right: 2rem;
-      border-radius: 100%;
-    }
-    span.circle.small.before {
-      display: none;
-    }
+  span.circle {
+    height: 70px;
+    width: 70px;
+    margin-right: 2rem;
+    border-radius: 100%;
+  }
+  span.circle.small.before {
+    display: none;
+  }
 
-    span.circle.small {
-      height: 50px;
-      width: 50px;
-      border-radius: 100%;
-      margin-right: 1rem;
-    }
+  span.circle.small {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    margin-right: 1rem;
+  }
 
-    span.circle {
-      height: 70px;
-      width: 70px;
-      margin-right: 2rem;
-      border-radius: 100%;
-    }
+  span.circle {
+    height: 70px;
+    width: 70px;
+    margin-right: 2rem;
+    border-radius: 100%;
+  }
 
-    #num11,
-    #num12,
-    #num13,
-    #num14,
-    #num15 {
-      display: none;
-    }
+  #num11,
+  #num12,
+  #num13,
+  #num14,
+  #num15 {
+    display: none;
+  }
 
-    #contact-form {
-      margin-left: 30px;
-      margin-right: 30px;
-    }
-  
+  #contact-form {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
 
   .header.page-section {
     height: 100vh;
@@ -5315,44 +5315,45 @@ progress {
 #project3 .project-row img,
 #project1 .project-row img {
   filter: drop-shadow(-20px 0px 10px #00000073);
-  
 }
 
 #project3 .project-row img {
   width: 435px;
-    height: 374px;
-    margin-top: 200px;
+  height: 374px;
+  margin-top: 200px;
 }
 @media screen and (min-width: 1500px) {
   #project1 .project-row img {
-    width: 450px!important;
+    width: 450px !important;
   }
 }
 .project-bg {
   z-index: 1;
-  width: 855px;
   height: 990px;
-  background: url("https://saadiyam.github.io/img/blob.svg");
+  background: url("https://saadiyam.github.io/haazLLC/img/blob.svg");
   transition: 0.3s ease;
   background-repeat: no-repeat;
   display: none;
+  width: 865px;
+  overflow: hidden;
 }
 
 .project-bg-2 {
   z-index: 1;
   width: 855px;
   height: 990px;
-  background: url("https://saadiyam.github.io/img/blob2.svg");
+  background: url("https://saadiyam.github.io/haazLLC/img/blob2.SVG");
   transition: 0.3s ease;
   background-repeat: no-repeat;
   display: none;
+  overflow: hidden;
 }
 
 .project-bg-2 .project-row img {
   margin-top: 170px;
   height: 415px;
   width: 465px;
-  shape-outside: circle(51.19% at 34px 61px);
+  shape-outside: circle();
 }
 
 .project-bg-3 {
@@ -5360,12 +5361,13 @@ progress {
   width: 855px;
   height: 990px;
   margin: 30px 0 20px 20px;
-  background: url("https://saadiyam.github.io/img/blob3.svg");
+  background: url("https://saadiyam.github.io/haazLLC/img/blob3.svg");
   transition: 0.3s ease;
   background-repeat: no-repeat;
   display: none;
   position: absolute;
   right: 0;
+  overflow: hidden;
 }
 
 #project3 #project-button {
@@ -5374,10 +5376,17 @@ progress {
 
 #project3 #project-button {
   margin-left: 440px;
-  margin-top: 110px;
+  margin-top: 90px;
 }
 
 @media screen and (max-width: 500px) {
+  iframe {
+    border: 0;
+    margin-top: 45px !important;
+    height: 255px;
+    min-height: 255px;
+  }
+
   #btn1,
   #btn2,
   #btn3 {
@@ -5388,23 +5397,24 @@ progress {
     margin-right: auto;
   }
 
-  #btn2, #btn3 {
+  #btn2,
+  #btn3 {
     margin-top: 80px;
   }
 
   .project-bg,
   .project-bg-2,
   .project-bg-3 {
-    width: 95vw !important;
+    width: 395px !important;
   }
 
   .project-bg-3 {
-    background: url("https://saadiyam.github.io/img/blob3-mobile.svg");
+    background: url("https://saadiyam.github.io/haazLLC/img/blob3-mobile.svg");
     background-repeat: no-repeat;
   }
 
   .project-bg-2 {
-    background: url("https://saadiyam.github.io/img/blob2-mobile.svg");
+    background: url("https://saadiyam.github.io/haazLLC/img/blob2-mobile.svg");
     background-repeat: no-repeat;
   }
 
@@ -5417,13 +5427,13 @@ progress {
     mix-blend-mode: multiply;
   }
 
-
   #project3 .project-row img {
     margin-top: 65px !important;
     margin-bottom: 70px;
     padding-left: 0px;
     padding-right: 5px;
     width: 210px;
+    height: 190px;
   }
 
   #project3 #project-button {
@@ -5432,13 +5442,13 @@ progress {
   }
 
   #project2 #project-button {
-    margin-left: -285px !important;
-    margin-top: 65px !important;
+    margin-left: -380px !important;
+    margin-top: 85px !important;
   }
 
   #project1 #project-button {
-    margin-left: -285px !important;
-    margin-top: 85px !important;
+    margin-left: -265px !important;
+    margin-top: 68px !important;
   }
 
   .project-bg-2 .project-row p {
@@ -5468,7 +5478,7 @@ progress {
   }
 
   .project-bg {
-    background: url("https://saadiyam.github.io/img/blob-mobile.svg");
+    background: url("https://saadiyam.github.io/haazLLC/img/blob-mobile.svg");
     background-repeat: no-repeat;
   }
 
@@ -5482,7 +5492,6 @@ progress {
   }
 
   .project-bg-3.project-change {
-    width: 900px;
     height: 1000px;
     display: block !important;
     top: 745px;
@@ -5504,6 +5513,13 @@ progress {
 }
 
 @media screen and (min-width: 501px) and (max-width: 800px) {
+  iframe {
+    border: 0;
+    margin-top: 110px !important;
+    min-height: 363px;
+    padding-right: 150px !important;
+  }
+
   #btn1,
   #btn2,
   #btn3 {
@@ -5518,23 +5534,23 @@ progress {
   .project-bg,
   .project-bg-2,
   .project-bg-3 {
-    width: 95vw !important;
+    max-width: 750px !important;
   }
 
   .project-text {
     font-size: 35px !important;
   }
   .project-bg-3 {
-    background: url("https://saadiyam.github.io/img/blob3-tab.svg");
+    background: url("https://saadiyam.github.io/haazLLC/img/blob3-tab.svg");
     background-repeat: no-repeat;
   }
 
   #project-bg-3 .project-text.website {
-    margin-left: -120px;
+    margin-left: -65px;
   }
 
   .project-bg-2 {
-    background: url("https://saadiyam.github.io/img/blob2-tab.svg");
+    background: url("https://saadiyam.github.io/haazLLC/img/blob2-tab.svg");
     background-repeat: no-repeat;
   }
 
@@ -5552,26 +5568,26 @@ progress {
   }
 
   #project3 #project-button {
-    margin-left: 233px;
+    margin-left: 275px;
     margin-top: 60px;
   }
 
   #project-bg-3 .project-row {
-    padding: 47px ​282px 40px 0px !important;
+    padding: 160px 0px 0px 50px !important;
   }
 
   #project2 #project-button {
-    margin-left: -570px !important;
-    margin-top: 75px !important;
+    margin-left: 32% !important;
+    margin-top: 40px !important;
   }
 
   #project1 #project-button {
-    margin-left: -572px !important;
-    margin-top: 120px !important;
+    margin-left: -540px !important;
+    margin-top: 215px !important;
   }
 
   .project-bg-2 .project-row p {
-    padding: 72px 45px 0px 0px!important;
+    padding: 72px 45px 0px 0px !important;
   }
 
   .project-bg-3 .project-row p {
@@ -5589,7 +5605,7 @@ progress {
 
   .project-bg-2.project-change {
     top: 725px;
-    margin-left: 18vw;
+    margin-left: 10%;
   }
 
   .project1 #project-button {
@@ -5598,11 +5614,10 @@ progress {
   }
 
   #project1 .project-change {
-    width: 900px;
     height: 1000px;
     display: block !important;
     top: 368px;
-    margin-left: 140px;
+    margin-left: 10%;
     position: absolute;
   }
 
@@ -5611,10 +5626,10 @@ progress {
   }
 
   #project1 .project-bg .website {
-    padding-right: 310px;
+    padding-right: 164px;
   }
   .project-bg {
-    background: url("https://saadiyam.github.io/img/blob-tab.svg");
+    background: url("https://saadiyam.github.io/haazLLC/img/blob-tab.svg");
     background-repeat: no-repeat;
   }
 
@@ -5628,23 +5643,18 @@ progress {
   }
 
   .project-bg-3.project-change {
-    width: 900px;
     height: 1000px;
     display: block !important;
     top: 1165px;
     position: absolute;
-    margin-left: 117px;
-    left: 7vw;
+    margin-left: 10%;
+    left: 3%;
   }
 
   #project-button #bar2 {
     transform: translateY(4px);
-    transform: translateY(-12px) rotate(45deg)!important;
-}
-}
-
-.project-row {
-  padding: 65px 50px 20px 0px;
+    transform: translateY(-12px) rotate(45deg) !important;
+  }
 }
 
 #project-bg-2 .project-row p {
@@ -5667,12 +5677,7 @@ progress {
   }
 }
 
-.project-bg .website {
-  padding-right: 70px;
-}
-
 .project-change {
-  width: 900px;
   height: 1000px;
   display: block !important;
   top: 335px;
@@ -5730,41 +5735,29 @@ footer {
     width: 300px;
   }
 }
-@media screen and (min-width: 0px)  and (max-width: 426px){
-  .bar{
-
-    right:-1px;
+@media screen and (min-width: 0px) and (max-width: 426px) {
+  .bar {
+    right: -1px;
     top: 50px;
-left: 851px;
-width: 43px;
-margin-bottom: 1px;
-height: 0px;
-border: 4px solid #A5A5A5;
-opacity: 1;
-
-    }
-    .custom{
-      display:none;
-    }
-    .custom1{
-      width:1000px;
-      height:2000px;
-    }
-    span.sect{
-      margin-left:5px;
-    }
-    span.circle.small{
-      height: 30px;
-      width:30px;
-    }
-    
-
-
-
-
-
-
-
-
-
+    left: 851px;
+    width: 43px;
+    margin-bottom: 1px;
+    height: 0px;
+    border: 4px solid #a5a5a5;
+    opacity: 1;
+  }
+  .custom {
+    display: none;
+  }
+  .custom1 {
+    width: 1000px;
+    height: 2000px;
+  }
+  span.sect {
+    margin-left: 5px;
+  }
+  span.circle.small {
+    height: 30px;
+    width: 30px;
+  }
 }
