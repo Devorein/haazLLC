@@ -5080,6 +5080,7 @@ progress {
 div.circles {
   text-align: center;
   margin: 2rem 0 2rem 0;
+  width: max-content;  
 }
 span.circle {
   display: inline-block;
