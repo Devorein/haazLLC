@@ -5081,13 +5081,16 @@ div.circles {
   text-align: center;
   margin: 2rem 0 2rem 0;
   width: max-content;  
+   display: flex;
+  justify-content: center;
 }
 span.circle {
   display: inline-block;
   height: 100px;
   width: 100px;
   border-radius: 100%;
-  margin-right: 3.5rem;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
   transition: 0.5s cubic-bezier(0.46, 0.03, 0.52, 0.96);
 }
 
@@ -5096,7 +5099,8 @@ span.circle.small {
   height: 70px;
   width: 70px;
   border-radius: 100%;
-  margin-right: 1.5rem;
+  margin-right: 0.7rem;
+  margin-left: 0.7rem;
   transition: 0.5s cubic-bezier(0.46, 0.03, 0.52, 0.96);
 }
 
