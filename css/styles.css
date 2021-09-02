@@ -5083,6 +5083,7 @@ div.circles {
   width: max-content;  
    display: flex;
   justify-content: center;
+  line-height: 200%;
 }
 span.circle {
   display: inline-block;
