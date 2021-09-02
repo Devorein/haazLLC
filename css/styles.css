@@ -5317,11 +5317,16 @@ span.circle.small {
   filter: blur(7px);
 }
 
+#project2,
+#project3,
+#project1 {
+  cursor: pointer;
+}
+
 #project2 .project-row img,
 #project3 .project-row img,
 #project1 .project-row img {
   filter: drop-shadow(-20px 0px 10px #00000073);
-  cursor: pointer;
 }
 
 #project3 .project-row img {
