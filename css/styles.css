@@ -5321,7 +5321,7 @@ span.circle.small {
 #project3 .project-row img,
 #project1 .project-row img {
   filter: drop-shadow(-20px 0px 10px #00000073);
-  pointer: pointer;
+  cursor: pointer;
 }
 
 #project3 .project-row img {
