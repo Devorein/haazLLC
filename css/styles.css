@@ -5079,7 +5079,7 @@ progress {
 
 div.circles {
   text-align: center;
-  margin: 2rem 0 2rem 0;
+  margin: 2rem auto 2rem auto;
   width: max-content;  
    display: flex;
   justify-content: center;
