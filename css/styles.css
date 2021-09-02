@@ -5719,9 +5719,9 @@ footer {
 }
 
 .footer-logo {
-  margin-left: 30%;
-  margin-top: 300px;
-  width: 626px;
+  margin-left: 40%;
+    margin-top: 300px;
+    width: 19vw;
 }
 
 @media screen and (max-width: 500px) {
