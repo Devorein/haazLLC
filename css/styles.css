@@ -5079,11 +5079,7 @@ progress {
 
 div.circles {
   text-align: center;
-  margin: 2rem auto 2rem auto;
-  width: max-content;  
-   display: flex;
-  justify-content: center;
-  line-height: 200%;
+  margin: 2rem 0 2rem 0;
 }
 span.circle {
   display: inline-block;
@@ -5091,7 +5087,6 @@ span.circle {
   width: 100px;
   border-radius: 100%;
   margin-right: 1.5rem;
-  margin-left: 1.5rem;
   transition: 0.5s cubic-bezier(0.46, 0.03, 0.52, 0.96);
 }
 
@@ -5100,8 +5095,7 @@ span.circle.small {
   height: 70px;
   width: 70px;
   border-radius: 100%;
-  margin-right: 0.7rem;
-  margin-left: 0.7rem;
+  margin-right: 1.5rem;
   transition: 0.5s cubic-bezier(0.46, 0.03, 0.52, 0.96);
 }
 
@@ -5113,7 +5107,6 @@ span.circle.small {
   div.circles {
     text-align: center;
     margin: 1rem 0 1rem 0;
-    line-height: 200%;
   }
 
   .circle-container {
@@ -5318,12 +5311,6 @@ span.circle.small {
   filter: blur(7px);
 }
 
-#project2,
-#project3,
-#project1 {
-  cursor: pointer;
-}
-
 #project2 .project-row img,
 #project3 .project-row img,
 #project1 .project-row img {
@@ -5332,7 +5319,7 @@ span.circle.small {
 
 #project3 .project-row img {
   width: 435px;
-  height: 364px;
+  height: 374px;
   margin-top: 200px;
 }
 @media screen and (min-width: 1500px) {
@@ -5512,6 +5499,29 @@ span.circle.small {
   }
 }
 
+@media screen and (max-width: 375px) {
+  .project-bg,
+  .project-bg-2,
+  .project-bg-3 {
+    width: 96vw !important;
+  }
+
+  .project-bg-3 {
+    background: url("/img/blob3-xs.svg");
+    background-repeat: no-repeat;
+  }
+
+  .project-bg-2 {
+    background: url("/img/blob2-xs.svg");
+    background-repeat: no-repeat;
+  }
+
+  .project-bg {
+    background: url("/img/blob-xs.svg");
+    background-repeat: no-repeat;
+  }
+}
+
 .project-row {
   padding: 65px 50px 20px 0px;
 }
@@ -5554,7 +5564,7 @@ span.circle.small {
     font-size: 35px !important;
   }
   .project-bg-3 {
-    background: url("https://saadiyam.github.io/haazLLC/img/blob3-tab.svg");
+    background: url("https://saadiyam.github.io/haazLLC/img/blob3.svg");
     background-repeat: no-repeat;
   }
 
@@ -5726,9 +5736,9 @@ footer {
 }
 
 .footer-logo {
-  margin-left: 40%;
-    margin-top: 300px;
-    width: 19vw;
+  margin-left: 30%;
+  margin-top: 300px;
+  width: 626px;
 }
 
 @media screen and (max-width: 500px) {
@@ -5748,7 +5758,7 @@ footer {
     width: 300px;
   }
 }
-@media screen and (min-width: 0px) and (max-width: 426px) {
+@media screen and (max-width: 426px) {
   .bar {
     right: -1px;
     top: 50px;
@@ -5772,5 +5782,42 @@ footer {
   span.circle.small {
     height: 30px;
     width: 30px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  span.circle {
+    height: 50px;
+    width: 50px;
+    margin-right: 1rem;
+  }
+
+  #project1 .project-row img {
+    height: 260px;
+    width: 195px;
+  }
+
+  iframe {
+    border: 0;
+    margin-top: 20px !important;
+  }
+
+  .project-bg-2 .website {
+    margin-top: -25px;
+  }
+
+  #project2 #project-button {
+    margin-left: -345px !important;
+    margin-top: 50px !important;
+  }
+
+  #project-bg-3 .row.text-center {
+    margin-top: -55px;
+  }
+}
+
+@media screen and (max-width: 395px) {
+  span.circle#num8 {
+    display: none;
   }
 }
