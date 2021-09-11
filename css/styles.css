@@ -5507,17 +5507,17 @@ span.circle.small {
   }
 
   .project-bg-3 {
-    background: url("/img/blob3-xs.svg");
+    background: url("https://saadiyam.github.io/haazLLC/img/blob3-xs.svg");
     background-repeat: no-repeat;
   }
 
   .project-bg-2 {
-    background: url("/img/blob2-xs.svg");
+    background: url("https://saadiyam.github.io/haazLLC/img/blob2-xs.svg");
     background-repeat: no-repeat;
   }
 
   .project-bg {
-    background: url("/img/blob-xs.svg");
+    background: url("https://saadiyam.github.io/haazLLC/img/blob-xs.svg");
     background-repeat: no-repeat;
   }
 }
