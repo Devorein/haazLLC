@@ -1,9 +1,11 @@
-var activeNavItem = $('.nav-link');
+const activeNavItem = document.querySelector('.nav-link');
 
-activeNavItem.click(function(){
-  activeNavItem.removeClass('active');
-  $(this).addClass('active');  
-});
+if(activeNavItem) {
+  activeNavItem.onClick = function(){
+    activeNavItem.classList.remove('active');
+    activeNavItem.classList.add('active');
+  };
+}
 
 function onClickMenu(){
 	document.getElementById("menu").classList.toggle("change");

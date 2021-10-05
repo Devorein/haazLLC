@@ -1,4 +1,4 @@
-var colors = ['#FDD79F',
+const colors = ['#FDD79F',
 	'#F5F5F5',
 	'#797A7D',
 	'#3B6A6C',
@@ -8,7 +8,7 @@ var colors = ['#FDD79F',
 	'#6A8E8F',
 	'#C7C7C7'];
 
-var allPaths = document.querySelectorAll('span.circle');
+const allPaths = document.querySelectorAll('span.circle');
 
 function reloadColors(elem) {
 	allPaths.forEach(function recolor(elem) {
@@ -34,8 +34,43 @@ function stopMovement(elem) {
 reloadColors();
 resetSpeed();
 
-var randInterval = Math.floor(Math.random() * 3500) + 800;
+const randInterval = Math.floor(Math.random() * 3500) + 800;
 
 console.log("Reloading every " + randInterval / 1000 + " seconds");
 
 autoReload = setInterval(reloadColors, randInterval);
+
+const formElement = document.querySelector("#form");
+const formButtonElement = document.querySelector(".form-button");
+
+formButtonElement.onclick = async (e) => {
+  e.preventDefault();
+  const formData = {};
+  const inputElements = Array.from(formElement.querySelectorAll('input'));
+  const textAreaElement = formElement.querySelector('textarea');
+  inputElements.forEach(inputElement=>{
+    const name = inputElement.name, value = inputElement.value;
+    formData[name] = value;
+  });
+  formData[textAreaElement.name] = textAreaElement.value;
+
+  const googleCaptcha = window.grecaptcha;
+  if (googleCaptcha) {
+    googleCaptcha.ready(async function () {
+      const token = await googleCaptcha.execute("6Lfplq4cAAAAADgQZAndUa11l-PJXBATMeZhgTEe", { action: 'submit' });
+      try {
+        const response = await fetch(`https://post-contact-worker.devorein.workers.dev/`, {
+          method: 'POST',
+          body: JSON.stringify({...formData, captchaToken: token}),
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        });
+        const data = await response.json();
+        console.log(data);
+      } catch (err) {
+        console.log(err.message)
+      }
+    });
+  }
+}
