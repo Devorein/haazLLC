@@ -193,6 +193,18 @@ h6,
   font-size: 1rem;
 }
 
+.input-error {
+  color: #f14040;
+  opacity: 0;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+.opacity-1 {
+  opacity: 1;
+}
+
 .link-primary {
   color: #f4623a;
 }

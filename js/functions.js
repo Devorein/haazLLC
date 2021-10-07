@@ -42,46 +42,60 @@ autoReload = setInterval(reloadColors, randInterval);
 
 const formElement = document.querySelector("#form");
 const formButtonElement = document.querySelector(".form-button");
+const inputElements = Array.from(formElement.querySelectorAll('input'));
+const textAreaElement = formElement.querySelector('textarea');
+const inputErrorElements = Array.from(document.querySelectorAll(".input-error"));
+const inputErrorElementsRecord = {};
+
+inputErrorElements.forEach(inputErrorElement=>inputErrorElementsRecord[inputErrorElement.getAttribute("name")] = inputErrorElement);
 
 formButtonElement.onclick = async (e) => {
   e.preventDefault();
   const formData = {};
-  const inputElements = Array.from(formElement.querySelectorAll('input'));
-  const textAreaElement = formElement.querySelector('textarea');
-  inputElements.forEach(inputElement=>{
+  
+  [...inputElements, textAreaElement].forEach(inputElement=>{
     const name = inputElement.name, value = inputElement.value;
-    formData[name] = value;
+    if(!value) {
+      const inputErrorElement = inputErrorElementsRecord[name];
+      inputErrorElement.classList.add('opacity-1');
+    } else {
+      formData[name] = value;
+    }
   });
-  formData[textAreaElement.name] = textAreaElement.value;
 
-  const googleCaptcha = window.grecaptcha;
-  if (googleCaptcha) {
-    googleCaptcha.ready(async function () {
-      const token = await googleCaptcha.execute("6Lfplq4cAAAAADgQZAndUa11l-PJXBATMeZhgTEe", { action: 'submit' });
-      try {
-        const response = await fetch(`https://post-contact-worker.devorein.workers.dev/`, {
-          method: 'POST',
-          body: JSON.stringify({...formData, captchaToken: token}),
-          headers: {
-            'Content-Type': 'application/json'
-          }
-        });
-        const data = await response.json();
-        console.log(data);
-        [...inputElements, textAreaElement].forEach(element => element.value = '');
-        Swal.fire(
-          'Thank you!',
-          'Your email was sent successfully',
-          'success'
-        )
-      } catch (err) {
-        Swal.fire({
-          icon: 'error',
-          title: 'Oops...',
-          text: err.message,
-        })
-        console.log(err.message)
-      }
-    });
+  if (formData.message && formData.company_name && formData.name && formData.email) {
+    const googleCaptcha = window.grecaptcha;
+    if (googleCaptcha) {
+      googleCaptcha.ready(async function () {
+        const token = await googleCaptcha.execute("6Lfplq4cAAAAADgQZAndUa11l-PJXBATMeZhgTEe", { action: 'submit' });
+        try {
+          const response = await fetch(`https://post-contact-worker.devorein.workers.dev/`, {
+            method: 'POST',
+            body: JSON.stringify({...formData, captchaToken: token}),
+            headers: {
+              'Content-Type': 'application/json'
+            }
+          });
+          const data = await response.json();
+          [...inputElements, textAreaElement].forEach(element => {
+            const inputErrorElement = inputErrorElementsRecord[element.name];
+            element.value = '';
+            inputErrorElement.classList.remove('opacity-1')
+          });
+          Swal.fire(
+            'Thank you!',
+            'Your email was sent successfully',
+            'success'
+          )
+        } catch (err) {
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: err.message,
+          })
+          console.log(err.message)
+        }
+      });
+    }
   }
 }

@@ -106,19 +106,28 @@
             <form id="form">
               <dl class="row py-4">
 
-                <dd class="col-sm-6 py-3"><input name="name" type="text" class="form-control" placeholder="Name"></dd>
+                <div></div>
+                <dd class="col-sm-6 py-3"><input name="name" type="text" class="form-control" placeholder="Name">
+                  <div name="name" class="input-error">Required*</div>
+                </dd>
 
 
                 <dd class="col-sm-6 py-3">
                   <input name="company_name" type="text" class="form-control text-info" placeholder="Company Name">
+                  <div name="company_name" class="input-error">Required*</div>
                 </dd>
 
 
-                <dd class="col-sm-12 py-3"><input type="email" name="email" class="form-control" placeholder="Email address"></dd>
+                <dd class="col-sm-12 py-3"><input type="email" name="email" class="form-control"
+                    placeholder="Email address">
+                  <div name="email" class="input-error">Required*</div>
+                </dd>
 
 
                 <dd class="col-sm-12 py-3"><textarea name="message" class="form-control" rows="6"
-                    placeholder="Message, Please include necessary details regarding your business."></textarea></dd>
+                    placeholder="Message, Please include necessary details regarding your business."></textarea>
+                  <div name="message" class="input-error">Required*</div>
+                </dd>
 
 
               </dl>
@@ -127,7 +136,8 @@
 
                 </div>
                 <div class="col-sm-4">
-                  <button type="submit" class="form-button form-control bg-info text-light font-secondary">Submit</button>
+                  <button type="submit"
+                    class="form-button form-control bg-info text-light font-secondary">Submit</button>
                 </div>
               </div>
             </form>
