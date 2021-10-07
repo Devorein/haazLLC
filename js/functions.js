@@ -69,6 +69,9 @@ formButtonElement.onclick = async (e) => {
 	});
 
 	if (formData.message && formData.company_name && formData.name && formData.email) {
+		formButtonElement.disabled = true;
+		formButtonElement.classList.add('bg-disabled');
+		formButtonElement.classList.remove('bg-info');
 		const googleCaptcha = window.grecaptcha;
 		if (googleCaptcha) {
 			googleCaptcha.ready(async function () {
@@ -89,6 +92,9 @@ formButtonElement.onclick = async (e) => {
 						inputErrorElement.classList.remove('opacity-1');
 					});
 					Swal.fire('Thank you!', 'Your email was sent successfully', 'success');
+					formButtonElement.disabled = false;
+					formButtonElement.classList.remove('bg-disabled');
+					formButtonElement.classList.add('bg-info');
 				} catch (err) {
 					Swal.fire({
 						icon: 'error',
