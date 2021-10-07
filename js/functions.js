@@ -72,6 +72,7 @@ formButtonElement.onclick = async (e) => {
 		formButtonElement.disabled = true;
 		formButtonElement.classList.add('bg-disabled');
 		formButtonElement.classList.remove('bg-info');
+		formButtonElement.innerHTML = `<div class="lds-ring"><div></div><div></div><div></div><div></div></div>`;
 		const googleCaptcha = window.grecaptcha;
 		if (googleCaptcha) {
 			googleCaptcha.ready(async function () {
@@ -95,6 +96,7 @@ formButtonElement.onclick = async (e) => {
 					formButtonElement.disabled = false;
 					formButtonElement.classList.remove('bg-disabled');
 					formButtonElement.classList.add('bg-info');
+					formButtonElement.innerHTML = `Submit`;
 				} catch (err) {
 					Swal.fire({
 						icon: 'error',
