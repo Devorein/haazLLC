@@ -68,7 +68,18 @@ formButtonElement.onclick = async (e) => {
         });
         const data = await response.json();
         console.log(data);
+        [...inputElements, textAreaElement].forEach(element => element.value = '');
+        Swal.fire(
+          'Thank you!',
+          'Your email was sent successfully',
+          'success'
+        )
       } catch (err) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: err.message,
+        })
         console.log(err.message)
       }
     });
